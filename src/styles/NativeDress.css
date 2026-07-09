@@ -1,0 +1,161 @@
+/* =========================
+   SECTION
+========================= */
+
+.cloths-section {
+    width: 92%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.cloths-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.cloths-description {
+    text-align: center;
+    color: #666;
+    max-width: 650px;
+    margin: auto;
+    margin-bottom: 60px;
+    line-height: 1.7;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.cloths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 35px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.cloth-item {
+    position: relative;
+    background: #fff;
+    transition: .3s ease;
+}
+
+.cloth-item:hover {
+    transform: translateY(-8px);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.cloth-image {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background: #f8f8f8;
+}
+
+.cloth-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.cloth-item:hover img {
+    transform: scale(1.08);
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.sale-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: royalblue;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: .85rem;
+    z-index: 10;
+}
+
+/* =========================
+   INFO
+========================= */
+
+.cloth-info {
+    padding: 20px 0;
+}
+
+.cloth-info h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.old-price {
+    color: gray;
+    text-decoration: line-through;
+    margin-bottom: 8px;
+}
+
+.new-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.buy-button {
+    width: 100%;
+    padding: 16px;
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.buy-button:hover {
+    background: black;
+    color: white;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+    .cloths-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cloth-image {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cloths-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cloths-title {
+        font-size: 2rem;
+    }
+
+    .cloth-image {
+        height: 350px;
+    }
+}
