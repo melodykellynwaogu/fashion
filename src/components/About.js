@@ -1,18 +1,50 @@
-import "../styles/About.css";
-import clothImg from "../assets/cloth1.jpg";
+import "../styles/about.css";
+import aboutImage from "../assets/cloth5.jpg";
 
 export default function About() {
     return `
-    
         <section class="about-section" id="about">
-            <div class="about-text-container">
-                <h2 class="section-title">PICK YOUR BEST <br> FASHION</h2>
-                <p class="section-description">Welcome to our fashion store! We specialize in providing the latest trends in clothing and accessories.</p>
-                <p class="section-description">We deal with different types of native fashion dress - And other Nigerians home usage</p>
+
+            <div class="about-container">
+
+                <div class="about-text">
+
+                    <span class="about-subtitle">
+                        ABOUT JONADAB FASHION
+                    </span>
+
+                    <h2 class="about-title">
+                        Pick Your Best
+                        <br>
+                        Fashion Style
+                    </h2>
+
+                    <p class="about-description">
+                        Welcome to Jonadab Fashion, where culture meets elegance.
+                        We specialize in beautifully crafted African fashion that
+                        blends tradition with modern style for every occasion.
+                    </p>
+
+                    <p class="about-description">
+                        From premium native dresses to carefully selected
+                        Nigerian home essentials, we are committed to providing
+                        quality products that celebrate African heritage.
+                    </p>
+
+                    <a href="/collection" class="about-btn">
+                        Explore Collection
+                    </a>
+
+                </div>
+
+                <div class="about-image">
+
+                    <img src="${aboutImage}" alt="African Fashion">
+
+                </div>
+
             </div>
-            <div class="about-image">
-                <img src="${clothImg}" alt="Fashion Store" />
-            </div>
+
         </section>
     `;
 }

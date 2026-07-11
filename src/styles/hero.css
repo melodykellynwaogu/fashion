@@ -1,0 +1,302 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================
+    HERO
+========================== */
+
+.hero-section{
+
+    min-height:100vh;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    transition:background-image 1s ease;
+
+    position:relative;
+}
+
+/* ==========================
+    DARK OVERLAY
+========================== */
+
+.hero-overlay{
+
+    width:100%;
+    min-height:100vh;
+
+    background:rgba(0,0,0,.45);
+
+}
+
+/* ==========================
+    NAVBAR
+========================== */
+
+.navbar{
+
+    width:92%;
+    max-width:1400px;
+
+    height:90px;
+
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+/* LOGO */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color:white;
+
+    font-size:1.4rem;
+    font-weight:bold;
+
+}
+
+.logo img{
+
+    width:60px;
+    height:60px;
+    object-fit:cover;
+
+}
+
+/* NAVIGATION */
+
+.nav-links{
+
+    list-style:none;
+
+    display:flex;
+
+    gap:45px;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:600;
+
+    position:relative;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:white;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+/* CONTACT BUTTON */
+
+.contact-btn a{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:14px 28px;
+
+    border:2px solid white;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+}
+
+.contact-btn a:hover{
+
+    background:white;
+
+    color:black;
+
+}
+
+/* ==========================
+    HERO CONTENT
+========================== */
+
+.hero-content{
+
+    max-width:700px;
+
+    margin:140px auto;
+
+    text-align:center;
+
+    color:white;
+
+    padding:0 20px;
+
+}
+
+.hero-content h1{
+
+    font-size:clamp(3rem,7vw,5.5rem);
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+    font-weight:800;
+
+}
+
+.hero-content p{
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+    max-width:600px;
+
+    margin:auto;
+
+    margin-bottom:45px;
+
+}
+
+/* ==========================
+    BUTTONS
+========================== */
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.shop-btn{
+
+    background:white;
+
+    color:black;
+
+    padding:16px 35px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.shop-btn:hover{
+
+    background:#ddd;
+
+}
+
+.outline-btn{
+
+    padding:16px 35px;
+
+    border:2px solid white;
+
+    border-radius:40px;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.outline-btn:hover{
+
+    background:white;
+
+    color:black;
+
+}
+
+/* ==========================
+    MOBILE
+========================== */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:20px 0;
+
+        gap:20px;
+
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:25px;
+
+    }
+
+    .hero-content{
+
+        margin:90px auto;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+}
