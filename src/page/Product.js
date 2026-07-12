@@ -2,10 +2,6 @@ import Navbar from "../components/Navbar";
 import products from "../data/products";
 import "../styles/product.css";
 
-function formatPrice(value) {
-    return Number(String(value).replace("MKW", "")).toFixed(2);
-}
-
 export default function Product() {
     const params = new URLSearchParams(window.location.search);
     const productId = Number(params.get("id"));
@@ -27,7 +23,7 @@ export default function Product() {
     return `
         ${Navbar()}
         <section class="product-page">
-            <a href="/home" class="page-back-link">← Back Home</a>
+            <a href="/" class="page-back-link">← Back Home</a>
 
             <div class="product-layout">
                 <div class="product-visual">
@@ -41,8 +37,8 @@ export default function Product() {
                     <p class="product-description">${product.description}</p>
 
                     <div class="price-row">
-                        <span class="old-price">MKW${formatPrice(product.oldPrice)}</span>
-                        <span class="new-price">MKW${formatPrice(product.newPrice)}</span>
+                        <span class="old-price">${product.oldPrice}</span>
+                        <span class="new-price">${product.newPrice}</span>
                     </div>
 
                     <div class="product-actions">

@@ -67,7 +67,7 @@ export default function Contact() {
 
                     <div class="info-box">
                         <h3>Phone</h3>
-                        <p>+265 99 2715 467</p>
+                        <p>+265 99-6724-948</p>
                     </div>
 
                     <div class="info-box">
@@ -88,15 +88,11 @@ export default function Contact() {
 
                     <div class="social-links">
 
-                        <h3>Follow Us</h3>
+                        <h3>Chat or Follow Us</h3>
 
                         <a href="#">WhatsApp</a>
 
                         <a href="#">Facebook</a>
-
-                        <a href="#">Instagram</a>
-
-                        <a href="#">Twitter / X</a>
 
                     </div>
 

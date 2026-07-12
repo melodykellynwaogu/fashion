@@ -3,7 +3,7 @@ import "../styles/cart.css";
 import { getCart, getCartTotal } from "../utils/cart";
 
 function formatMoney(value) {
-    return Number(value).toFixed(2);
+    return new Intl.NumberFormat("en-US").format(value);
 }
 
 export default function Cart() {
@@ -93,7 +93,7 @@ export default function Cart() {
 
                     <div class="summary-row total-row">
                         <span>Total</span>
-                        <strong>$${formatMoney(total)}</strong>
+                        <strong>MKW${formatMoney(total)}</strong>
                     </div>
 
                     <button

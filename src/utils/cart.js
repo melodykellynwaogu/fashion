@@ -83,7 +83,7 @@ export function getCartTotal() {
 
             total +
 
-            Number(item.newPrice.replace("$", "")) *
+            Number(String(item.newPrice).replace(/[^\d]/g, "")) *
 
             item.quantity,
 
