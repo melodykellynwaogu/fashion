@@ -10,7 +10,7 @@ export default function About() {
                 <div class="about-text">
 
                     <span class="about-subtitle">
-                        ABOUT JONADAB FASHION
+                        ABOUT PRISCILLA FASHION
                     </span>
 
                     <h2 class="about-title">
@@ -20,13 +20,13 @@ export default function About() {
                     </h2>
 
                     <p class="about-description">
-                        Welcome to Jonadab Fashion, where culture meets elegance.
+                        Welcome to Priscilla Beauty Fashion, where culture meets elegance.
                         We specialize in beautifully crafted African fashion that
                         blends tradition with modern style for every occasion.
                     </p>
 
                     <p class="about-description">
-                        From premium native dresses to carefully selected
+                        From native dresses to carefully selected
                         Nigerian home essentials, we are committed to providing
                         quality products that celebrate African heritage.
                     </p>

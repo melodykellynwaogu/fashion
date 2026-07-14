@@ -1,5 +1,5 @@
 import "../styles/navbar.css";
-import logoImg from "../assets/logo.png";
+import logoImg from "../assets/FB.png";
 import { getCartCount } from "../utils/cart";
 
 export default function Navbar() {
@@ -16,7 +16,7 @@ export default function Navbar() {
 
                         <img src="${logoImg}" alt="Jonadab Fashion">
 
-                        <span>Jonadab Fashion</span>
+                        <span>Priscilla Fashion</span>
 
                     </a>
 

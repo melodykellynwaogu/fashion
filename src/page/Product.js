@@ -53,6 +53,15 @@ export default function Product() {
 
                         <a href="/cart" class="view-cart-link">View Cart</a>
                     </div>
+
+                    <div>
+                        <button
+                            type="button"
+                            class="buy-now-button"
+                        >
+                            Buy Now
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

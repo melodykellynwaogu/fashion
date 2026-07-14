@@ -7,6 +7,7 @@ import Product from "./page/Product";
 import Cart from "./page/Cart";
 import products from "./data/products";
 import About from "./components/About";
+import Footer from "./components/Footer";
 
 import {
     addToCart,
@@ -29,7 +30,11 @@ function render() {
 
     const Page = routes[window.location.pathname] || Home;
 
-    document.querySelector("#app").innerHTML = Page();
+    document.querySelector("#app").innerHTML = 
+    `
+        ${Page()};
+        ${Footer()}
+    `
 }
 
 document.addEventListener("click", e => {
