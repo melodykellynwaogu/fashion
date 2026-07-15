@@ -2,16 +2,10 @@ import "../styles/hero.css";
 
 import hero1 from "../assets/cloth1.jpg";
 import hero2 from "../assets/cloth2.jpg";
-// import hero3 from "../assets/cloth3.jpg";
-// import hero4 from "../assets/cloth4.jpg";
-// import hero5 from "../assets/cloth5.jpg";
 
 const heroImages = [
     hero1,
-    hero2,
-    // hero3,
-    // hero4,
-    // hero5
+    hero2
 ];
 
 let currentImage = 0;
@@ -22,7 +16,6 @@ function startHeroSlider() {
 
     if (!hero) return;
 
-    // Prevent multiple intervals if Hero is rendered again
     if (window.heroSlider) {
         clearInterval(window.heroSlider);
     }
@@ -42,7 +35,6 @@ export default function Hero() {
     setTimeout(startHeroSlider, 100);
 
     return `
-
         <section
             class="hero-section"
             style="background-image:url('${heroImages[0]}')"
@@ -50,48 +42,51 @@ export default function Hero() {
 
             <div class="hero-overlay">
 
-                <div class="hero-content">
+                <div class="hero-container">
 
-                    <span class="hero-subtitle">
-                        AFRICAN FASHION
-                    </span>
+                    <div class="hero-content">
 
-                    <h1>
-                        Traditional Fashion
-                        <br>
-                        Reimagined
-                    </h1>
+                        <span class="hero-subtitle">
+                            AFRICAN FASHION
+                        </span>
 
-                    <p>
-                        Discover handcrafted African wear designed with
-                        elegance, quality and timeless tradition.
-                        Every outfit is tailored to celebrate culture,
-                        confidence and individuality.
-                    </p>
+                        <h1>
+                            Traditional Fashion
+                            <br>
+                            Reimagined
+                        </h1>
 
-                    <div class="hero-buttons">
+                        <p>
+                            Discover handcrafted African wear designed with
+                            elegance, quality and timeless tradition.
+                            Every outfit is tailored to celebrate culture,
+                            confidence and individuality.
+                        </p>
 
-                        <a
-                            href="/collection"
-                            class="shop-btn"
-                        >
-                            Shop Collection
-                        </a>
+                        <div class="hero-buttons">
 
-                        <a
-                            href="/contact"
-                            class="outline-btn"
-                        >
-                            Book Consultation
-                        </a>
+                            <a
+                                href="/collection"
+                                class="shop-btn"
+                            >
+                                Shop Collection
+                            </a>
+
+                            <a
+                                href="/contact"
+                                class="outline-btn"
+                            >
+                                Book Consultation
+                            </a>
+
+                        </div>
 
                     </div>
 
-                </div> 
+                </div>
 
             </div>
 
         </section>
-
     `;
 }

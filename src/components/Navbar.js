@@ -7,23 +7,21 @@ export default function Navbar() {
 
     return `
         <header class="navbar-container">
+            <nav class="navbar" role="navigation">
+                <div class="navbar-top">
+                    <div class="logo">
+                        <a href="/" class="logo-link">
+                            <img src="${logoImg}" alt="Jonadab Fashion">
+                            <span>Priscilla Fashion</span>
+                        </a>
+                    </div>
 
-            <nav class="navbar">
-
-                <div class="logo">
-
-                    <a href="/" class="logo-link">
-
-                        <img src="${logoImg}" alt="Jonadab Fashion">
-
-                        <span>Priscilla Fashion</span>
-
-                    </a>
-
+                    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                        ☰
+                    </button>
                 </div>
 
-                <ul class="nav-links">
-
+                <ul class="nav-links" id="navbar-menu">
                     <li>
                         <a href="/">Home</a>
                     </li>
@@ -32,31 +30,24 @@ export default function Navbar() {
                         <a href="/collection">Collection</a>
                     </li>
 
-
                     <li>
                         <a href="#services">Services</a>
                     </li>
-
                 </ul>
 
-                <div class="contact-btn">
+                <div class="nav-actions">
+                    <div class="contact-btn">
+                        <a href="/contact">Contact Us</a>
+                    </div>
 
-                    <a href="/contact">
-                        Contact Us
-                    </a>
-
+                    <div class="cart-btn">
+                        <a href="/cart" class="cart-link">
+                            Cart
+                            <span class="cart-count">${cartCount}</span>
+                        </a>
+                    </div>
                 </div>
-
-                <div class="cart-btn">
-                
-                    <a href="/cart" class="cart-link">
-                        Cart
-                        <span class="cart-count">${cartCount}</span>
-                    </a>
-                </div>
-
             </nav>
-
         </header>
     `;
 }

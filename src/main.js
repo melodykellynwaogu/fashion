@@ -85,11 +85,26 @@ document.addEventListener("click", e => {
         return;
     }
 
+    const menuToggle = e.target.closest(".menu-toggle");
+    if (menuToggle) {
+        const navbarHeader = menuToggle.closest(".navbar-container");
+        const isOpen = navbarHeader.classList.toggle("mobile-open");
+        menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        return;
+    }
+
     const link = e.target.closest("a");
 
     if (!link) return;
 
     const href = link.getAttribute("href");
+
+    const navHeader = e.target.closest(".navbar-container");
+    if (navHeader?.classList.contains("mobile-open")) {
+        navHeader.classList.remove("mobile-open");
+        const toggle = navHeader.querySelector(".menu-toggle");
+        if (toggle) toggle.setAttribute("aria-expanded", "false");
+    }
 
     if (!href.startsWith("/")) return;
 

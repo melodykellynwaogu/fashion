@@ -1,6 +1,6 @@
-/* ===========================
-   NAVBAR
-=========================== */
+/* ===================================
+   NAVBAR CONTAINER
+=================================== */
 
 .navbar-container{
 
@@ -13,32 +13,36 @@
 
     z-index:1000;
 
-    background:rgba(0,0,0,.25);
+    background:rgba(0,0,0,.35);
 
     backdrop-filter:blur(12px);
 
 }
+
+/* ===================================
+   NAVBAR
+=================================== */
 
 .navbar{
 
     width:92%;
     max-width:1400px;
 
-    margin:auto;
-
     height:90px;
+
+    margin:auto;
 
     display:flex;
 
-    align-items:center;
-
     justify-content:space-between;
+
+    align-items:center;
 
 }
 
-/* ===========================
+/* ===================================
    LOGO
-=========================== */
+=================================== */
 
 .logo-link{
 
@@ -50,7 +54,7 @@
 
     text-decoration:none;
 
-    color:white;
+    color:#fff;
 
     font-size:1.3rem;
 
@@ -60,25 +64,27 @@
 
 .logo img{
 
-    width:55px;
+    width:58px;
 
-    height:55px;
+    height:58px;
 
     object-fit:cover;
 
 }
 
-/* ===========================
-   NAV LINKS
-=========================== */
+/* ===================================
+   NAVIGATION
+=================================== */
 
 .nav-links{
 
     display:flex;
 
-    list-style:none;
+    align-items:center;
 
-    gap:45px;
+    gap:40px;
+
+    list-style:none;
 
 }
 
@@ -86,7 +92,7 @@
 
     text-decoration:none;
 
-    color:white;
+    color:#fff;
 
     font-weight:600;
 
@@ -95,36 +101,6 @@
     transition:.3s;
 
 }
-
-.cart-link{
-    text-decoration:none;
-
-    color:white;
-
-    padding:14px 30px;
-
-    border:2px solid white;
-
-    border-radius:40px;
-
-    transition:.3s;
-
-    font-weight:600;
-}
-
-/* .cart-count{
-    min-width:24px;
-    height:24px;
-    padding:0 7px;
-    border-radius:999px;
-    background:white;
-    color:black;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    font-size:.8rem;
-    font-weight:700;
-} */
 
 .nav-links a::after{
 
@@ -140,7 +116,7 @@
 
     height:2px;
 
-    background:white;
+    background:#fff;
 
     transition:.3s;
 
@@ -152,19 +128,39 @@
 
 }
 
-/* ===========================
+/* ===================================
+   ACTIONS
+=================================== */
+
+.nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+/* ===================================
    CONTACT BUTTON
-=========================== */
+=================================== */
 
 .contact-btn a{
 
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
     text-decoration:none;
 
-    color:white;
+    color:#fff;
 
-    padding:14px 30px;
+    padding:13px 28px;
 
-    border:2px solid white;
+    border:2px solid #fff;
 
     border-radius:40px;
 
@@ -176,40 +172,183 @@
 
 .contact-btn a:hover{
 
-    background:white;
+    background:#fff;
 
-    color:black;
+    color:#000;
 
 }
 
-.cart-link-item{
+/* ===================================
+   CART
+=================================== */
+
+.cart-link{
+
     display:flex;
+
     align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    padding:13px 22px;
+
+    border:2px solid #fff;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+    font-weight:600;
+
 }
 
-/* ===========================
-   MOBILE
-=========================== */
+.cart-link:hover{
 
-@media(max-width:900px){
+    background:#fff;
+
+    color:#000;
+
+}
+
+.cart-count{
+
+    width:24px;
+
+    height:24px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    color:#000;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+}
+
+/* ===================================
+   HAMBURGER
+=================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:#fff;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media (max-width:900px){
 
     .navbar{
 
-        flex-direction:column;
-
         height:auto;
 
-        padding:20px 0;
+        padding:18px 0;
 
-        gap:20px;
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .navbar-top{
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+        width:100%;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
 
     }
 
     .nav-links{
 
-        gap:20px;
+        display:none;
 
-        flex-wrap:wrap;
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:18px;
+
+        width:100%;
+
+        padding:25px 0;
+
+    }
+
+    .nav-links.active{
+
+        display:flex;
+
+    }
+
+    .nav-actions{
+
+        display:none;
+
+        flex-direction:column;
+
+        width:100%;
+
+        gap:15px;
+
+        padding-bottom:20px;
+
+    }
+
+    .nav-actions.active{
+
+        display:flex;
+
+    }
+
+    .contact-btn,
+
+    .cart-btn{
+
+        width:100%;
+
+    }
+
+    .contact-btn a,
+
+    .cart-link{
+
+        width:100%;
 
         justify-content:center;
 
