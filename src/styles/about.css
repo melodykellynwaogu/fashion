@@ -111,7 +111,7 @@
 
     width:100%;
 
-    height:650px;
+    height:clamp(360px, 62vw, 650px);
 
     object-fit:cover;
 
@@ -143,14 +143,52 @@
 
     .about-title{
 
-        font-size:3rem;
+        font-size:clamp(2.2rem, 8vw, 3rem);
 
+    }
+
+    .about-description{
+        font-size:1rem;
     }
 
     .about-image img{
 
-        height:450px;
+        height:420px;
 
+    }
+
+}
+
+@media(max-width:640px){
+
+    .about-section{
+        padding:76px 0;
+    }
+
+    .about-container{
+        width:94%;
+        gap:30px;
+    }
+
+    .about-text{
+        text-align:center;
+    }
+
+    .about-subtitle{
+        font-size:.78rem;
+    }
+
+    .about-description{
+        line-height:1.75;
+    }
+
+    .about-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .about-image img{
+        height:320px;
     }
 
 }

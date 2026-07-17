@@ -72,7 +72,7 @@
 
     border-radius: 8px;
 
-    font-size: 1rem;
+    font-size: 16px;
 
     outline: none;
 
@@ -112,6 +112,18 @@
 
     background: #444;
 
+}
+
+.contact-form-element {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-note {
+    margin-top: 14px;
+    color: #666;
+    font-size: .92rem;
+    line-height: 1.6;
 }
 
 /* ==========================
@@ -245,6 +257,42 @@
 
         padding: 30px;
 
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .contact-section {
+        width: 94%;
+        margin: 110px auto 70px;
+    }
+
+    .contact-header {
+        margin-bottom: 40px;
+    }
+
+    .contact-header h1 {
+        font-size: clamp(2rem, 8vw, 2.4rem);
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 22px;
+    }
+
+    .contact-form button,
+    .go-back-btn {
+        width: 100%;
+    }
+
+    .contact-form-note {
+        text-align: center;
+        font-size: .88rem;
+    }
+
+    .contact-info {
+        gap: 22px;
     }
 
 }

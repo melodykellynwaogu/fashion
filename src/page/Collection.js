@@ -4,10 +4,10 @@ import Navbar from "../components/Navbar";
 
 import "../styles/collection.css";
 
-export default function Collection(){
+export default function Collection(includeNavbar = true){
 
     return `
-        ${Navbar()}
+        ${includeNavbar ? Navbar() : ""}
 
         <section class="cloths-section">
 

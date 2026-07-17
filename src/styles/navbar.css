@@ -1,357 +1,227 @@
-/* ===================================
-   NAVBAR CONTAINER
-=================================== */
-
-.navbar-container{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-
-    z-index:1000;
-
-    background:rgba(0,0,0,.35);
-
-    backdrop-filter:blur(12px);
-
-}
-
-/* ===================================
+/* ===========================
    NAVBAR
-=================================== */
+=========================== */
 
-.navbar{
-
-    width:92%;
-    max-width:1400px;
-
-    height:90px;
-
-    margin:auto;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
+.navbar-container {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 1000;
+    background: rgba(10, 10, 10, .28);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
 }
 
-/* ===================================
+.navbar {
+    width: 92%;
+    max-width: 1400px;
+    margin: auto;
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.navbar-top {
+    display: contents;
+}
+
+/* ===========================
    LOGO
-=================================== */
+=========================== */
 
-.logo-link{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    text-decoration:none;
-
-    color:#fff;
-
-    font-size:1.3rem;
-
-    font-weight:700;
-
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
 }
 
-.logo img{
-
-    width:58px;
-
-    height:58px;
-
-    object-fit:cover;
-
+.logo img {
+    width: 54px;
+    height: 54px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-/* ===================================
-   NAVIGATION
-=================================== */
+/* ===========================
+   NAV LINKS
+=========================== */
 
-.nav-links{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:40px;
-
-    list-style:none;
-
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 34px;
+    padding: 0;
+    margin: 0;
 }
 
-.nav-links a{
-
-    text-decoration:none;
-
-    color:#fff;
-
-    font-weight:600;
-
-    position:relative;
-
-    transition:.3s;
-
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    position: relative;
+    transition: opacity .25s ease;
 }
 
-.nav-links a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-8px;
-
-    width:0;
-
-    height:2px;
-
-    background:#fff;
-
-    transition:.3s;
-
+.nav-links a:hover {
+    opacity: .82;
 }
 
-.nav-links a:hover::after{
-
-    width:100%;
-
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .25s ease;
 }
 
-/* ===================================
-   ACTIONS
-=================================== */
-
-.nav-actions{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:16px;
-
+.nav-links a:hover::after {
+    width: 100%;
 }
 
-/* ===================================
-   CONTACT BUTTON
-=================================== */
-
-.contact-btn a{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-decoration:none;
-
-    color:#fff;
-
-    padding:13px 28px;
-
-    border:2px solid #fff;
-
-    border-radius:40px;
-
-    transition:.3s;
-
-    font-weight:600;
-
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
 
-.contact-btn a:hover{
+/* ===========================
+   BUTTONS
+=========================== */
 
-    background:#fff;
-
-    color:#000;
-
+.contact-btn a,
+.cart-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    text-decoration: none;
+    color: white;
+    padding: 12px 22px;
+    border: 1.5px solid rgba(255, 255, 255, .85);
+    border-radius: 999px;
+    transition: background-color .25s ease, color .25s ease, transform .25s ease, border-color .25s ease;
+    font-weight: 600;
 }
 
-/* ===================================
-   CART
-=================================== */
-
-.cart-link{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    text-decoration:none;
-
-    color:#fff;
-
-    padding:13px 22px;
-
-    border:2px solid #fff;
-
-    border-radius:40px;
-
-    transition:.3s;
-
-    font-weight:600;
-
+.contact-btn a:hover,
+.cart-link:hover {
+    background: white;
+    color: #111;
+    border-color: white;
+    transform: translateY(-1px);
 }
 
-.cart-link:hover{
-
-    background:#fff;
-
-    color:#000;
-
+.cart-link-item {
+    display: flex;
+    align-items: center;
 }
 
-.cart-count{
-
-    width:24px;
-
-    height:24px;
-
-    border-radius:50%;
-
-    background:#fff;
-
-    color:#000;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:.75rem;
-
-    font-weight:700;
-
+.cart-count {
+    min-width: 24px;
+    height: 24px;
+    padding: 0 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .15);
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .82rem;
+    font-weight: 700;
 }
 
-/* ===================================
-   HAMBURGER
-=================================== */
-
-.menu-toggle{
-
-    display:none;
-
-    background:none;
-
-    border:none;
-
-    color:#fff;
-
-    font-size:2rem;
-
-    cursor:pointer;
-
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .06);
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
 }
 
-/* ===================================
+/* ===========================
    MOBILE
-=================================== */
+=========================== */
 
-@media (max-width:900px){
-
-    .navbar{
-
-        height:auto;
-
-        padding:18px 0;
-
-        flex-direction:column;
-
-        align-items:stretch;
-
+@media (max-width: 900px) {
+    .navbar {
+        min-height: 72px;
+        padding: 14px 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
     }
 
-    .navbar-top{
-
-        display:flex;
-
-        justify-content:space-between;
-
-        align-items:center;
-
-        width:100%;
-
+    .navbar-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
     }
 
-    .menu-toggle{
-
-        display:block;
-
+    .menu-toggle {
+        display: inline-flex;
+        flex-shrink: 0;
     }
 
-    .nav-links{
-
-        display:none;
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-        gap:18px;
-
-        width:100%;
-
-        padding:25px 0;
-
+    .nav-links,
+    .nav-actions {
+        display: none;
     }
 
-    .nav-links.active{
-
-        display:flex;
-
+    .navbar-container.mobile-open .nav-links,
+    .navbar-container.mobile-open .nav-actions {
+        display: flex;
+        width: 100%;
     }
 
-    .nav-actions{
-
-        display:none;
-
-        flex-direction:column;
-
-        width:100%;
-
-        gap:15px;
-
-        padding-bottom:20px;
-
+    .navbar-container.mobile-open .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding: 18px 0 10px;
+        border-top: 1px solid rgba(255, 255, 255, .1);
     }
 
-    .nav-actions.active{
-
-        display:flex;
-
+    .navbar-container.mobile-open .nav-actions {
+        flex-direction: column;
+        align-items: stretch;
+        padding-bottom: 8px;
+        gap: 10px;
     }
 
-    .contact-btn,
-
-    .cart-btn{
-
-        width:100%;
-
+    .navbar-container.mobile-open .contact-btn a,
+    .navbar-container.mobile-open .cart-link {
+        width: 100%;
     }
 
-    .contact-btn a,
-
-    .cart-link{
-
-        width:100%;
-
-        justify-content:center;
-
+    .nav-links a {
+        width: 100%;
+        display: inline-flex;
+        padding: 10px 0;
     }
 
+    .nav-links a::after {
+        bottom: 4px;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
 }

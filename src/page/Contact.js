@@ -23,11 +23,13 @@ export default function Contact() {
 
                     <h2>Send us a Message</h2>
 
-                    <form>
+                    <form class="contact-form-element" data-contact-form>
 
                         <div class="input-group">
-                            <label>Name</label>
+                            <label for="contact-name">Name</label>
                             <input
+                                id="contact-name"
+                                name="name"
                                 type="text"
                                 placeholder="Enter your name"
                                 required
@@ -35,8 +37,10 @@ export default function Contact() {
                         </div>
 
                         <div class="input-group">
-                            <label>Email</label>
+                            <label for="contact-email">Email</label>
                             <input
+                                id="contact-email"
+                                name="email"
                                 type="email"
                                 placeholder="Enter your email"
                                 required
@@ -44,17 +48,23 @@ export default function Contact() {
                         </div>
 
                         <div class="input-group">
-                            <label>Message</label>
+                            <label for="contact-message">Message</label>
                             <textarea
+                                id="contact-message"
+                                name="message"
                                 rows="6"
                                 placeholder="Write your message..."
                                 required
                             ></textarea>
                         </div>
 
-                        <button type="submit">
+                        <button type="submit" data-contact-submit>
                             Send Message
                         </button>
+
+                        // <p class="contact-form-note">
+                        //     This will open your email app with the details filled in.
+                        // </p>
 
                     </form>
 

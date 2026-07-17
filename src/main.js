@@ -7,7 +7,10 @@ import Product from "./page/Product";
 import Cart from "./page/Cart";
 import products from "./data/products";
 import About from "./components/About";
+import Policy from "./data/Policy";
 import Footer from "./components/Footer";
+import Refund from "./data/Refund";
+
 
 import {
     addToCart,
@@ -17,12 +20,16 @@ import {
     updateQuantity
 } from "./utils/cart";
 
+const contactRecipient = "priscillafashion@email.com";
+
 const routes = {
     "/": Home,
     "/contact": Contact,
     "/collection": Collection,
     "/product": Product,
     "/cart": Cart,
+    "/policy": Policy,
+    "/refund": Refund,
 
 };
 
@@ -114,6 +121,45 @@ document.addEventListener("click", e => {
 
     render();
 
+});
+
+document.addEventListener("submit", e => {
+    const form = e.target.closest("[data-contact-form]");
+
+    if (!form) return;
+
+    e.preventDefault();
+
+    const name = form.querySelector("#contact-name")?.value.trim() || "";
+    const email = form.querySelector("#contact-email")?.value.trim() || "";
+    const message = form.querySelector("#contact-message")?.value.trim() || "";
+
+    const subject = `Contact form message from ${name || "Website visitor"}`;
+    const bodyLines = [
+        `Name: ${name || "N/A"}`,
+        `Email: ${email || "N/A"}`,
+        "",
+        message || "No message provided."
+    ];
+    const body = bodyLines.join("\n");
+
+    const isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+    const gmailComposeUrl =
+        `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(contactRecipient)}` +
+        `&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoUrl =
+        `mailto:${encodeURIComponent(contactRecipient)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    if (isMobile) {
+        window.location.href = mailtoUrl;
+        return;
+    }
+
+    const opened = window.open(gmailComposeUrl, "_blank", "noopener,noreferrer");
+
+    if (!opened) {
+        window.location.href = mailtoUrl;
+    }
 });
 
 window.addEventListener("popstate", render);

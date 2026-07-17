@@ -4,6 +4,7 @@ import clothsImage3 from "../assets/cloth3.jpg";
 import clothsImage4 from "../assets/cloth4.jpg";
 import clothsImage5 from "../assets/cloth5.jpg";
 import clothsImage6 from "../assets/cloth6.jpg";
+import clothsImage9 from "../assets/cloth9.jpg";
 
 const products = [
   {
@@ -62,6 +63,16 @@ const products = [
     title: "Lofty Gown",
     oldPrice: "MKW60,000",
     newPrice: "MKW45,000",
+    category: "African",
+    badge: "new",
+    description: "A classic full-length flowy African gown built for ultimate comfort without sacrificing luxury. Its graceful, airy drape and brilliant print orientation offer a timeless traditional look that transitions effortlessly from daytime social activities to evening family events."
+  },
+  {
+    id: 9,
+    image: clothsImage9,
+    title: "Lofty Gown",
+    oldPrice: "MKW50,000",
+    newPrice: "45,000",
     category: "African",
     badge: "old",
     description: "A classic full-length flowy African gown built for ultimate comfort without sacrificing luxury. Its graceful, airy drape and brilliant print orientation offer a timeless traditional look that transitions effortlessly from daytime social activities to evening family events."

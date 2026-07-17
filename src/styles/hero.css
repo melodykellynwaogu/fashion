@@ -1,302 +1,174 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+.hero-section {
+    min-height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease, transform .6s ease;
+    overflow: hidden;
 }
 
-/* ==========================
-    HERO
-========================== */
- 
-.hero-section{
-
-    min-height:100vh;
-    margin-top: -3.7%;
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    transition:background-image 1s ease;
-
-    position:relative;
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(14, 14, 14, .78) 0%, rgba(14, 14, 14, .38) 52%, rgba(14, 14, 14, .16) 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, .18) 0%, rgba(0, 0, 0, .55) 100%);
+    pointer-events: none;
 }
 
-/* ==========================
-    DARK OVERLAY
-========================== */
-
-.hero-overlay{
-
-    width:100%;
-    min-height:100vh;
-
-    background:rgba(0,0,0,.45);
-
+.hero-overlay {
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 132px 0 84px;
 }
 
-/* ==========================
-    NAVBAR
-========================== */
-
-.navbar{
-
-    width:92%;
-    max-width:1400px;
-
-    height:90px;
-
-    margin:auto;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
+.hero-container {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
 }
 
-/* LOGO */
-
-.logo{
-
-    display:flex;
-    align-items:center;
-    gap:12px;
-
-    color:white;
-
-    font-size:1.4rem;
-    font-weight:bold;
-
+.hero-content {
+    width: min(100%, 760px);
+    color: white;
+    text-align: left;
+    padding: clamp(28px, 4vw, 48px);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 28px;
+    background: rgba(10, 10, 10, .24);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, .24);
 }
 
-.logo img{
-
-    width:60px;
-    height:60px;
-    object-fit:cover;
-
+.hero-subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: rgba(255, 255, 255, .84);
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 700;
 }
 
-/* NAVIGATION */
-
-.nav-links{
-
-    list-style:none;
-
-    display:flex;
-
-    gap:45px;
-
+.hero-subtitle::before {
+    content: "";
+    width: 34px;
+    height: 1px;
+    background: currentColor;
+    opacity: .85;
 }
 
-.nav-links a{
-
-    text-decoration:none;
-
-    color:white;
-
-    font-weight:600;
-
-    position:relative;
-
+.hero-content h1 {
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: .95;
+    margin-bottom: 22px;
+    font-weight: 800;
+    letter-spacing: -.04em;
 }
 
-.nav-links a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    bottom:-6px;
-
-    width:0;
-
-    height:2px;
-
-    background:white;
-
-    transition:.3s;
-
+.hero-content p {
+    font-size: clamp(1rem, 1.9vw, 1.15rem);
+    line-height: 1.8;
+    max-width: 620px;
+    margin-bottom: 34px;
+    color: rgba(255, 255, 255, .9);
 }
 
-.nav-links a:hover::after{
-
-    width:100%;
-
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
-/* CONTACT BUTTON */
-/* 
-.contact-btn a{
-
-    text-decoration:none;
-
-    color:white;
-
-    padding:14px 28px;
-
-    border:2px solid white;
-
-    border-radius:40px;
-
-    transition:.3s;
-
+.shop-btn,
+.outline-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 14px 28px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease;
 }
 
-.contact-btn a:hover{
-
-    background:white;
-
-    color:black;
-
-} */
-
-/* ==========================
-    HERO CONTENT
-========================== */
-
-.hero-content{
-
-    max-width:700px;
-
-    margin:140px auto;
-
-    text-align:center;
-
-    color:white;
-
-    padding:0 20px;
-
+.shop-btn {
+    background: #fff;
+    color: #111;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, .18);
 }
 
-.hero-content h1{
-
-    font-size:clamp(3rem,7vw,5.5rem);
-
-    line-height:1.1;
-
-    margin-bottom:25px;
-
-    font-weight:800;
-
+.shop-btn:hover {
+    background: #f1f1f1;
+    transform: translateY(-2px);
 }
 
-.hero-content p{
-
-    font-size:1.2rem;
-
-    line-height:1.8;
-
-    max-width:600px;
-
-    margin:auto;
-
-    margin-bottom:45px;
-
+.outline-btn {
+    border: 1.5px solid rgba(255, 255, 255, .75);
+    color: white;
+    background: rgba(255, 255, 255, .05);
 }
 
-/* ==========================
-    BUTTONS
-========================== */
-
-.hero-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
+.outline-btn:hover {
+    background: rgba(255, 255, 255, .14);
+    border-color: white;
+    transform: translateY(-2px);
 }
 
-.shop-btn{
-
-    background:white;
-
-    color:black;
-
-    padding:16px 35px;
-
-    border-radius:40px;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    transition:.3s;
-
-}
-
-.shop-btn:hover{
-
-    background:#ddd;
-
-}
-
-.outline-btn{
-
-    padding:16px 35px;
-
-    border:2px solid white;
-
-    border-radius:40px;
-
-    color:white;
-
-    text-decoration:none;
-
-    transition:.3s;
-
-}
-
-.outline-btn:hover{
-
-    background:white;
-
-    color:black;
-
-}
-
-/* ==========================
-    MOBILE
-========================== */
-
-@media(max-width:900px){
-
-    .navbar{
-
-        flex-direction:column;
-
-        height:auto;
-
-        padding:20px 0;
-
-        gap:20px;
-
+@media (max-width: 900px) {
+    .hero-overlay {
+        padding: 110px 0 70px;
     }
 
-    .nav-links{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-        gap:25px;
-
+    .hero-container {
+        justify-content: center;
     }
 
-    .hero-content{
-
-        margin:90px auto;
-
+    .hero-content {
+        text-align: center;
+        padding: 26px 18px;
     }
 
-    .hero-buttons{
-
-        flex-direction:column;
-
-        align-items:center;
-
+    .hero-subtitle {
+        justify-content: center;
     }
 
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-overlay {
+        min-height: 92vh;
+        padding: 98px 0 56px;
+    }
+
+    .hero-content {
+        border-radius: 22px;
+        background: rgba(8, 8, 8, .3);
+    }
+
+    .hero-content h1 {
+        line-height: 1.02;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .shop-btn,
+    .outline-btn {
+        width: 50%;
+    }
 }

@@ -6,7 +6,7 @@
     width: 92%;
     max-width: 1400px;
     margin: auto;
-    padding: 130px 0 80px;
+    padding: 120px 0 80px;
 }
 
 .cloths-title {
@@ -32,7 +32,7 @@
 .cloths-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 35px;
+    gap: 28px;
 }
 
 /* =========================
@@ -43,6 +43,9 @@
     position: relative;
     background: #fff;
     transition: .3s ease;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
 }
 
 .cloth-item:hover {
@@ -92,7 +95,7 @@
 ========================= */
 
 .cloth-info {
-    padding: 20px 0;
+    padding: 18px 18px 22px;
 }
 
 .cloth-info h3 {
@@ -121,11 +124,12 @@
     width: 100%;
     padding: 16px;
     background: white;
-    border: 1px solid black;
+    border: 1px solid #111;
     cursor: pointer;
     font-size: 1rem;
     transition: .3s;
     color: #000;
+    border-radius: 10px;
 }
 
 .buy-button:hover {
@@ -174,6 +178,11 @@
 }
 
 @media (max-width: 768px) {
+    .cloths-section {
+        width: 94%;
+        padding: 100px 0 70px;
+    }
+
     .cloths-grid {
         grid-template-columns: 1fr;
     }
@@ -183,6 +192,10 @@
     }
 
     .cloth-image {
-        height: 350px;
+        height: 300px;
+    }
+
+    .cloth-info {
+        padding: 18px 16px 20px;
     }
 }

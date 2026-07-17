@@ -12,9 +12,10 @@ export default function Footer() {
                 </h2>
 
                 <ul class="footer-links">
-                    <li><a href="/refund-policy">Refund Policy</a></li>
-                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/refund">Refund Policy</a></li>
+                    <li><a href="/policy">Privacy Policy</a></li>
                     <li><a href="/terms">Terms of Service</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
 
                 <p class="copyright">
