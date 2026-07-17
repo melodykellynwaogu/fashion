@@ -1,0 +1,172 @@
+/* ==========================
+   REFUND PAGE
+========================== */
+
+.refund-container{
+
+    width:min(850px,90%);
+    margin:120px auto 80px;
+
+    color:#333;
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.refund-header{
+
+    text-align:center;
+
+    margin-bottom:4rem;
+
+}
+
+.refund-header h1{
+
+    font-size:clamp(2.2rem,5vw,3.5rem);
+
+    margin-bottom:1rem;
+
+    font-weight:500;
+
+    color:#111;
+
+}
+
+.refund-header p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+
+.refund-section{
+
+    margin-bottom:3rem;
+
+}
+
+.refund-section h2{
+
+    font-size:1.2rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    margin-bottom:1.5rem;
+
+    color:#444;
+
+    border-left:4px solid #000;
+
+    padding-left:15px;
+
+}
+
+.refund-section ul,
+.refund-section ol{
+
+    padding-left:1.5rem;
+
+}
+
+.refund-section li{
+
+    margin-bottom:1.2rem;
+
+    line-height:1.9;
+
+    color:#555;
+
+}
+
+.refund-section p{
+
+    line-height:1.9;
+
+    margin-bottom:1rem;
+
+    color:#555;
+
+}
+
+/* ==========================
+   IMPORTANT NOTE
+========================== */
+
+.refund-note{
+
+    margin-top:4rem;
+
+    padding:1.5rem;
+
+    background:#f8f8f8;
+
+    border-left:5px solid #111;
+
+    line-height:1.8;
+
+    color:#444;
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+    .refund-container{
+
+        margin:90px auto 60px;
+
+    }
+
+    .refund-header{
+
+        margin-bottom:3rem;
+
+    }
+
+    .refund-section{
+
+        margin-bottom:2.5rem;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .refund-header h1{
+
+        font-size:2rem;
+
+    }
+
+    .refund-section h2{
+
+        font-size:1rem;
+
+    }
+
+    .refund-section li,
+    .refund-section p{
+
+        font-size:.95rem;
+
+    }
+
+}

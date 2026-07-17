@@ -1,0 +1,177 @@
+/* ==========================
+   TERMS & CONDITIONS
+========================== */
+
+.terms-container{
+
+    width:min(900px,90%);
+    margin:120px auto 80px;
+
+    color:#333;
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.terms-header{
+
+    text-align:center;
+
+    margin-bottom:4rem;
+
+}
+
+.terms-header h1{
+
+    font-size:clamp(2.2rem,5vw,3.5rem);
+
+    margin-bottom:1rem;
+
+    font-weight:500;
+
+    color:#111;
+
+}
+
+.terms-header p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    color:#666;
+
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+.terms-section{
+
+    margin-bottom:3rem;
+
+}
+
+.terms-section h2{
+
+    font-size:1.15rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    margin-bottom:1.25rem;
+
+    padding-left:15px;
+
+    border-left:4px solid #111;
+
+    color:#444;
+
+}
+
+.terms-section p{
+
+    line-height:1.9;
+
+    color:#555;
+
+}
+
+.terms-section ul{
+
+    padding-left:1.5rem;
+
+}
+
+.terms-section li{
+
+    margin-bottom:1rem;
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+/* ==========================
+   NOTE
+========================== */
+
+.terms-note{
+
+    margin-top:4rem;
+
+    padding:1.5rem;
+
+    background:#f7f7f7;
+
+    border-left:5px solid #111;
+
+}
+
+.terms-note strong{
+
+    display:block;
+
+    margin-bottom:.75rem;
+
+    color:#111;
+
+}
+
+.terms-note p{
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+    .terms-container{
+
+        margin:90px auto 60px;
+
+    }
+
+    .terms-header{
+
+        margin-bottom:3rem;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .terms-header h1{
+
+        font-size:2rem;
+
+    }
+
+    .terms-section h2{
+
+        font-size:1rem;
+
+    }
+
+    .terms-section p,
+    .terms-section li{
+
+        font-size:.95rem;
+
+    }
+
+}

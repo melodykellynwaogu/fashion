@@ -62,10 +62,6 @@ export default function Contact() {
                             Send Message
                         </button>
 
-                        // <p class="contact-form-note">
-                        //     This will open your email app with the details filled in.
-                        // </p>
-
                     </form>
 
                 </div>

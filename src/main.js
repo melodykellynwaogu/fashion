@@ -10,6 +10,8 @@ import About from "./components/About";
 import Policy from "./data/Policy";
 import Footer from "./components/Footer";
 import Refund from "./data/Refund";
+import Terms from "./data/Terms";
+import Navbar from "./components/Navbar";
 
 
 import {
@@ -30,6 +32,7 @@ const routes = {
     "/cart": Cart,
     "/policy": Policy,
     "/refund": Refund,
+    "/terms": Terms,
 
 };
 
@@ -40,6 +43,7 @@ function render() {
     document.querySelector("#app").innerHTML = 
     `
         ${Page()};
+        ${Navbar()}
         ${Footer()}
     `
 }

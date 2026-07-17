@@ -1,37 +1,134 @@
+import "../styles/policy.css";
 
-
-export default function Policy(){
+export default function Policy() {
     return `
         <section class="policy-container">
-            
-            <div class="policy-detials>
-                <h1 class="policy-title>Privacy Policy</h1>
-                <p class="policy-subtitile">
-                    All information provided by you is only used to ensure the best possible shopping experience. All information is strictly confidential. Your personal information will not be shared, circulated, nor modified in any way without your previous consent.
-                </p>
+
+            <div class="policy-header">
+
+                <h1>Privacy Policy</h1>
 
                 <p>
-                    Since we have't started delivery yet, Always wanting to encounrage visitors to do the indoors shoping. Though while filling in the contact detials. Infomation such as (names, emails and numbers. e.g) may used for receving customer purposes and to complete your order.
+                    Your privacy is important to us. We are committed to
+                    protecting your personal information and ensuring that it
+                    is handled responsibly. This policy explains how we collect,
+                    use, and protect the information you provide when using our
+                    website.
                 </p>
+
             </div>
 
-            <div>
-                <h2>Cookies usage</h2>
-                <p>
-                    Cookies are pieces of information which a website transfers to your computers hard disk for record-keeping purposes. Cookies can make a web site more useful by personalizing information for visitors and by storing information about your preferences on our site. The use of cookies is an industry standard, and many major websites use them to provide useful features for their customers. It is our policy to use cookies only for the following purposes:
-                </p>
-                <ul>
-                    <li>To identify you</li>
-                    <li>To customize our site for you</li>
-                    <li>To help improve navigation</li>
-                </ul>
-                <p>
-                    Most browsers are initially set up to accept cookies. If you prefer, you can set your browser to reject cookies. However, you will not be able to take full advantage of our web site if you do so.
+            <div class="policy-section">
 
-                    We use tracking technology to better understand site traffic patterns and use. However, none of the information collected via tracking technology is personally identifiable information 
+                <h2>Information We Collect</h2>
+
+                <p>
+                    When you contact us or submit an enquiry through our
+                    website, we may collect information such as:
                 </p>
+
+                <ul>
+                    <li>Your full name.</li>
+                    <li>Email address.</li>
+                    <li>Phone number.</li>
+                    <li>Any message or enquiry you choose to send us.</li>
+                </ul>
+
+            </div>
+
+            <div class="policy-section">
+
+                <h2>How We Use Your Information</h2>
+
+                <p>
+                    The information you provide is used only to help us serve
+                    you better. This may include:
+                </p>
+
+                <ul>
+                    <li>Responding to your enquiries.</li>
+                    <li>Scheduling consultations or appointments.</li>
+                    <li>Discussing custom clothing orders.</li>
+                    <li>Improving our customer service.</li>
+                </ul>
+
+            </div>
+
+            <div class="policy-section">
+
+                <h2>Shopping & Personal Visits</h2>
+
+                <p>
+                    At this time, we encourage customers to visit our physical
+                    location to view products and complete purchases. Any
+                    personal information collected during enquiries is used only
+                    for communication and customer support.
+                </p>
+
+            </div>
+
+            <div class="policy-section">
+
+                <h2>Cookies</h2>
+
+                <p>
+                    Our website may use cookies to improve your browsing
+                    experience. Cookies help us remember your preferences and
+                    understand how visitors use our website.
+                </p>
+
+                <ul>
+                    <li>To improve website performance.</li>
+                    <li>To personalize your browsing experience.</li>
+                    <li>To understand visitor traffic and usage.</li>
+                </ul>
+
+                <p>
+                    Most web browsers accept cookies automatically. You may
+                    disable cookies through your browser settings if you prefer,
+                    although some website features may not function properly.
+                </p>
+
+            </div>
+
+            <div class="policy-section">
+
+                <h2>Information Security</h2>
+
+                <p>
+                    We take reasonable steps to keep your information secure.
+                    Your personal information will never be sold, rented, or
+                    shared with third parties without your consent unless
+                    required by law.
+                </p>
+
+            </div>
+
+            <div class="policy-section">
+
+                <h2>Your Rights</h2>
+
+                <p>
+                    You may request to review, update, or remove your personal
+                    information at any time by contacting our customer service
+                    team.
+                </p>
+
+            </div>
+
+            <div class="policy-note">
+
+                <strong>Questions?</strong>
+
+                <p>
+                    If you have any questions about this Privacy Policy or how
+                    your information is handled, please contact us. As our
+                    business grows and new services become available, this
+                    policy may be updated from time to time.
+                </p>
+
             </div>
 
         </section>
-    `
+    `;
 }

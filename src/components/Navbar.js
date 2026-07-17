@@ -12,7 +12,7 @@ export default function Navbar() {
                     <div class="logo">
                         <a href="/" class="logo-link">
                             <img src="${logoImg}" alt="Jonadab Fashion">
-                            <span>Priscilla Fashion</span>
+                            <span>Priscilla Beauty</span>
                         </a>
                     </div>
 
