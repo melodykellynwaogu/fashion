@@ -5,6 +5,7 @@ import Contact from "./page/Contact";
 import Collection from "./page/Collection";
 import Product from "./page/Product";
 import Cart from "./page/Cart";
+import SearchResults from "./page/SearchResults";
 import products from "./data/products";
 import About from "./components/About";
 import Policy from "./data/Policy";
@@ -30,6 +31,7 @@ const routes = {
     "/collection": Collection,
     "/product": Product,
     "/cart": Cart,
+    "/search": SearchResults,
     "/policy": Policy,
     "/refund": Refund,
     "/terms": Terms,
@@ -42,8 +44,8 @@ function render() {
 
     document.querySelector("#app").innerHTML = 
     `
-        ${Page()};
         ${Navbar()}
+        ${Page()}
         ${Footer()}
     `
 }
@@ -91,6 +93,20 @@ document.addEventListener("click", e => {
             clearCart();
         }
 
+        if (action === "toggle-search") {
+            const navbarHeader = actionButton.closest(".navbar-container");
+            const isOpen = navbarHeader.classList.toggle("search-open");
+            const searchInput = navbarHeader.querySelector(".search-input");
+
+            if (isOpen) {
+                searchInput?.focus();
+            } else {
+                searchInput?.blur();
+            }
+
+            return;
+        }
+
         window.dispatchEvent(new PopStateEvent("popstate"));
 
         return;
@@ -128,6 +144,21 @@ document.addEventListener("click", e => {
 });
 
 document.addEventListener("submit", e => {
+    const searchForm = e.target.closest("[data-search-form]");
+
+    if (searchForm) {
+        e.preventDefault();
+
+        const query = searchForm.querySelector(".search-input")?.value.trim() || "";
+        const targetUrl = query
+            ? `/search?q=${encodeURIComponent(query)}`
+            : "/collection";
+
+        history.pushState({}, "", targetUrl);
+        render();
+        return;
+    }
+
     const form = e.target.closest("[data-contact-form]");
 
     if (!form) return;

@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import "../styles/cart.css";
 import { getCart, getCartTotal } from "../utils/cart";
 
@@ -12,7 +11,6 @@ export default function Cart() {
 
     if (!cart.length) {
         return `
-            ${Navbar()}
             <section class="cart-page">
                 <div class="cart-header">
                     <a href="/collection" class="page-back-link">← Continue shopping</a>
@@ -29,7 +27,6 @@ export default function Cart() {
     }
 
     return `
-        ${Navbar()}
         <section class="cart-page">
             <div class="cart-header">
                 <a href="/collection" class="page-back-link">← Continue shopping</a>

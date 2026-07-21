@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import products from "../data/products";
 import "../styles/product.css";
 
@@ -9,7 +8,6 @@ export default function Product() {
 
     if (!product) {
         return `
-            ${Navbar()}
             <section class="product-page">
                 <a href="/collection" class="page-back-link">← Back to collection</a>
                 <div class="product-empty-state">
@@ -21,7 +19,6 @@ export default function Product() {
     }
 
     return `
-        ${Navbar()}
         <section class="product-page">
             <a href="/" class="page-back-link">← Back Home</a>
 

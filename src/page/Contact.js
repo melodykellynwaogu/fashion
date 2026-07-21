@@ -1,9 +1,7 @@
-import Navbar from "../components/Navbar";
 import "../styles/contact.css";
 
 export default function Contact() {
     return `
-        ${Navbar()}
         <section class="contact-section">
             <a href="/" class="go-back-btn">Back</a>
 

@@ -1,14 +1,10 @@
 import products from "../data/products";
 import ProductCard from "../components/ProductCard";
-import Navbar from "../components/Navbar";
 
 import "../styles/collection.css";
 
 export default function Collection(includeNavbar = true){
-
     return `
-        ${includeNavbar ? Navbar() : ""}
-
         <section class="cloths-section">
 
             <div class="collection-header">
@@ -20,8 +16,7 @@ export default function Collection(includeNavbar = true){
             </div>
 
             <p class="cloths-description">
-
-                Explore our premium African fashion collection.
+                Explore Your Best In African Fashion Collection.
 
             </p>
 

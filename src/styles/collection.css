@@ -35,6 +35,14 @@
     gap: 28px;
 }
 
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #666;
+    padding: 20px 0;
+    font-size: 1.05rem;
+}
+
 /* =========================
    CARD
 ========================= */

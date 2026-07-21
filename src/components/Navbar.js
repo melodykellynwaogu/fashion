@@ -65,9 +65,24 @@ export default function Navbar() {
                         ${personIcon}
                     </a>
 
-                    <button type="button" class="icon-button search-btn" aria-label="Search">
+                    <button
+                        type="button"
+                        class="icon-button search-btn"
+                        aria-label="Search"
+                        data-action="toggle-search"
+                    >
                         ${searchIcon}
                     </button>
+
+                    <form class="search-form" data-search-form>
+                        <input
+                            type="search"
+                            name="q"
+                            class="search-input"
+                            placeholder="Search products..."
+                            aria-label="Search products"
+                        >
+                    </form>
                 </div>
             </nav>
         </header>
