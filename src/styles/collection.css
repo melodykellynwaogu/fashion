@@ -43,7 +43,7 @@
     position: relative;
     background: #fff;
     transition: .3s ease;
-    border-radius: 18px;
+    border-radius: 0;
     overflow: hidden;
     box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
 }
@@ -129,7 +129,7 @@
     font-size: 1rem;
     transition: .3s;
     color: #000;
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 .buy-button:hover {
@@ -138,29 +138,6 @@
     border: none;
 }
 
-.go-back-btn {
-
-    padding:14px 26px;
-
-    text-decoration:none;
-
-    color:white;
-
-    background:#111;
-
-    border-radius:40px;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-.go-back-btn:hover{
-
-    background:#333;
-
-}
 
 
 /* =========================

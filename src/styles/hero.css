@@ -41,7 +41,7 @@
     text-align: left;
     padding: clamp(28px, 4vw, 48px);
     border: 1px solid rgba(255, 255, 255, .12);
-    border-radius: 28px;
+    border-radius: 0;
     background: rgba(10, 10, 10, .24);
     backdrop-filter: blur(10px);
     box-shadow: 0 24px 80px rgba(0, 0, 0, .24);
@@ -96,32 +96,34 @@
     justify-content: center;
     min-height: 52px;
     padding: 14px 28px;
-    border-radius: 999px;
+    border-radius: 0;
     text-decoration: none;
     font-weight: 700;
     transition: transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease;
 }
 
 .shop-btn {
-    background: #fff;
-    color: #111;
+    background: transparent;
+    color: #fff;
     box-shadow: 0 16px 36px rgba(0, 0, 0, .18);
+    border: 1px solid #fff;
 }
 
 .shop-btn:hover {
     background: #f1f1f1;
     transform: translateY(-2px);
+    color: #000;
 }
 
 .outline-btn {
-    border: 1.5px solid rgba(255, 255, 255, .75);
+    border: 0.9px solid #fff;
     color: white;
-    background: rgba(255, 255, 255, .05);
+    background: transparent;
 }
 
 .outline-btn:hover {
-    background: rgba(255, 255, 255, .14);
-    border-color: white;
+    background: #fff;
+    color: #000;
     transform: translateY(-2px);
 }
 

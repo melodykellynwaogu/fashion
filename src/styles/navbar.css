@@ -94,6 +94,12 @@
     gap: 14px;
 }
 
+.action-red {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 /* ===========================
    BUTTONS
 =========================== */
@@ -108,8 +114,8 @@
     text-decoration: none;
     color: white;
     padding: 12px 22px;
-    border: 1.5px solid rgba(255, 255, 255, .85);
-    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .85);
+    border-radius: 0;
     transition: background-color .25s ease, color .25s ease, transform .25s ease, border-color .25s ease;
     font-weight: 600;
 }
@@ -139,6 +145,35 @@
     justify-content: center;
     font-size: .82rem;
     font-weight: 700;
+}
+
+.icon-link,
+.icon-button {
+    width: 46px;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1.5px solid rgba(255, 255, 255, .85);
+    background: rgba(255, 255, 255, .06);
+    color: white;
+    transition: background-color .25s ease, color .25s ease, transform .25s ease, border-color .25s ease;
+}
+
+.icon-link:hover,
+.icon-button:hover {
+    background: white;
+    color: #111;
+    border-color: white;
+    transform: translateY(-1px);
+}
+
+.icon-link svg,
+.icon-button svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
 }
 
 .menu-toggle {
@@ -206,8 +241,15 @@
         gap: 10px;
     }
 
+    .navbar-container.mobile-open .action-red {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
     .navbar-container.mobile-open .contact-btn a,
-    .navbar-container.mobile-open .cart-link {
+    .navbar-container.mobile-open .cart-link,
+    .navbar-container.mobile-open .icon-link,
+    .navbar-container.mobile-open .icon-button {
         width: 100%;
     }
 

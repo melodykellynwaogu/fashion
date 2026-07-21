@@ -1,6 +1,18 @@
 import "../styles/navbar.css";
 import logoImg from "../assets/FB.png";
 import { getCartCount } from "../utils/cart";
+ 
+const personIcon = `
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 12a4.5 4.5 0 1 0-4.5-4.5A4.5 4.5 0 0 0 12 12Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Z"></path>
+    </svg>
+`;
+
+const searchIcon = `
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M10.5 4a6.5 6.5 0 1 0 4.02 11.61l4.44 4.44 1.41-1.41-4.44-4.44A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"></path>
+    </svg>
+`;
 
 export default function Navbar() {
     const cartCount = getCartCount();
@@ -31,7 +43,7 @@ export default function Navbar() {
                     </li>
 
                     <li>
-                        <a href="#services">Services</a>
+                        <a href="#arrival">New Arrival</a>
                     </li>
                 </ul>
 
@@ -46,6 +58,16 @@ export default function Navbar() {
                             <span class="cart-count">${cartCount}</span>
                         </a>
                     </div>
+                </div>
+
+                <div class="action-red">
+                    <a href="/login" class="icon-link login-link" aria-label="Login">
+                        ${personIcon}
+                    </a>
+
+                    <button type="button" class="icon-button search-btn" aria-label="Search">
+                        ${searchIcon}
+                    </button>
                 </div>
             </nav>
         </header>

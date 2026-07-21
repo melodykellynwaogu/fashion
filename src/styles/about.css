@@ -77,13 +77,15 @@
 
     padding:16px 36px;
 
-    background:#111;
+    background: #fff;
 
-    color:white;
+    color: #000;
 
     text-decoration:none;
 
-    border-radius:40px;
+    border-radius: 0;
+
+    border: 1px solid #111;
 
     transition:.3s;
 
@@ -91,7 +93,8 @@
 
 .about-btn:hover{
 
-    background:#444;
+    background:#000;
+    color: #fff;
 
 }
 
