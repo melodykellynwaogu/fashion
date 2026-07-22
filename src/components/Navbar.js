@@ -33,58 +33,75 @@ export default function Navbar() {
                     </button>
                 </div>
 
-                <ul class="nav-links" id="navbar-menu">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
+                <div class="nav-drawer">
+                    <div class="drawer-head">
+                        <span class="drawer-title">Menu</span>
 
-                    <li>
-                        <a href="/collection">Collection</a>
-                    </li>
-
-                    <li>
-                        <a href="#arrival">New Arrival</a>
-                    </li>
-                </ul>
-
-                <div class="nav-actions">
-                    <div class="contact-btn">
-                        <a href="/contact">Contact Us</a>
-                    </div>
-
-                    <div class="cart-btn">
-                        <a href="/cart" class="cart-link">
-                            Cart
-                            <span class="cart-count">${cartCount}</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="action-red">
-                    <a href="/login" class="icon-link login-link" aria-label="Login">
-                        ${personIcon}
-                    </a>
-
-                    <button
-                        type="button"
-                        class="icon-button search-btn"
-                        aria-label="Search"
-                        data-action="toggle-search"
-                    >
-                        ${searchIcon}
-                    </button>
-
-                    <form class="search-form" data-search-form>
-                        <input
-                            type="search"
-                            name="q"
-                            class="search-input"
-                            placeholder="Search products..."
-                            aria-label="Search products"
+                        <button
+                            class="menu-toggle drawer-close"
+                            type="button"
+                            aria-label="Close navigation"
+                            aria-expanded="true"
                         >
-                    </form>
+                            ×
+                        </button>
+                    </div>
+
+                    <ul class="nav-links" id="navbar-menu">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection">Collection</a>
+                        </li>
+
+                        <li>
+                            <a href="#arrival">New Arrival</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <div class="contact-btn">
+                            <a href="/contact">Contact Us</a>
+                        </div>
+
+                        <div class="cart-btn">
+                            <a href="/cart" class="cart-link">
+                                Cart
+                                <span class="cart-count">${cartCount}</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="action-red">
+                        <a href="/login" class="icon-link login-link" aria-label="Login">
+                            ${personIcon}
+                        </a>
+
+                        <button
+                            type="button"
+                            class="icon-button search-btn"
+                            aria-label="Search"
+                            data-action="toggle-search"
+                        >
+                            ${searchIcon}
+                        </button>
+
+                        <form class="search-form" data-search-form>
+                            <input
+                                type="search"
+                                name="q"
+                                class="search-input"
+                                placeholder="Search products..."
+                                aria-label="Search products"
+                            >
+                        </form>
+                    </div>
                 </div>
             </nav>
+
+            <button class="nav-backdrop" type="button" aria-label="Close navigation"></button>
         </header>
     `;
 }

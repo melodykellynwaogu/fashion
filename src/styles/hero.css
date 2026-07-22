@@ -13,8 +13,8 @@
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(14, 14, 14, .78) 0%, rgba(14, 14, 14, .38) 52%, rgba(14, 14, 14, .16) 100%),
-        linear-gradient(180deg, rgba(0, 0, 0, .18) 0%, rgba(0, 0, 0, .55) 100%);
+        linear-gradient(90deg, rgba(18, 14, 10, .82) 0%, rgba(18, 14, 10, .48) 48%, rgba(18, 14, 10, .18) 100%),
+        linear-gradient(180deg, rgba(18, 14, 10, .18) 0%, rgba(18, 14, 10, .62) 100%);
     pointer-events: none;
 }
 
@@ -41,9 +41,9 @@
     text-align: left;
     padding: clamp(28px, 4vw, 48px);
     border: 1px solid rgba(255, 255, 255, .12);
-    border-radius: 0;
-    background: rgba(10, 10, 10, .24);
-    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(180deg, rgba(20, 15, 11, .34), rgba(20, 15, 11, .22));
+    backdrop-filter: blur(12px);
     box-shadow: 0 24px 80px rgba(0, 0, 0, .24);
 }
 
@@ -73,6 +73,8 @@
     margin-bottom: 22px;
     font-weight: 800;
     letter-spacing: -.04em;
+    font-family: var(--display-font);
+    color: #fff;
 }
 
 .hero-content p {
@@ -96,23 +98,23 @@
     justify-content: center;
     min-height: 52px;
     padding: 14px 28px;
-    border-radius: 0;
+    border-radius: 999px;
     text-decoration: none;
     font-weight: 700;
     transition: transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease;
 }
 
 .shop-btn {
-    background: transparent;
-    color: #fff;
+    background: #fff;
+    color: #111;
     box-shadow: 0 16px 36px rgba(0, 0, 0, .18);
     border: 1px solid #fff;
 }
 
 .shop-btn:hover {
-    background: #f1f1f1;
+    background: #f2e8dc;
     transform: translateY(-2px);
-    color: #000;
+    color: #111;
 }
 
 .outline-btn {
@@ -171,6 +173,6 @@
 
     .shop-btn,
     .outline-btn {
-        width: 50%;
+        width: 100%;
     }
 }

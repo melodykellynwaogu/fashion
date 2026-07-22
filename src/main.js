@@ -117,6 +117,17 @@ document.addEventListener("click", e => {
         const navbarHeader = menuToggle.closest(".navbar-container");
         const isOpen = navbarHeader.classList.toggle("mobile-open");
         menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        document.body.classList.toggle("nav-lock", isOpen);
+        return;
+    }
+
+    const backdrop = e.target.closest(".nav-backdrop");
+    if (backdrop) {
+        const navbarHeader = backdrop.closest(".navbar-container");
+        navbarHeader.classList.remove("mobile-open", "search-open");
+        document.body.classList.remove("nav-lock");
+        const toggle = navbarHeader.querySelector(".menu-toggle");
+        if (toggle) toggle.setAttribute("aria-expanded", "false");
         return;
     }
 
@@ -131,6 +142,7 @@ document.addEventListener("click", e => {
         navHeader.classList.remove("mobile-open");
         const toggle = navHeader.querySelector(".menu-toggle");
         if (toggle) toggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("nav-lock");
     }
 
     if (!href.startsWith("/")) return;
@@ -198,5 +210,17 @@ document.addEventListener("submit", e => {
 });
 
 window.addEventListener("popstate", render);
+
+window.addEventListener("keydown", e => {
+    if (e.key !== "Escape") return;
+
+    const nav = document.querySelector(".navbar-container.mobile-open");
+    if (!nav) return;
+
+    nav.classList.remove("mobile-open", "search-open");
+    document.body.classList.remove("nav-lock");
+    const toggle = nav.querySelector(".menu-toggle");
+    if (toggle) toggle.setAttribute("aria-expanded", "false");
+});
 
 render();

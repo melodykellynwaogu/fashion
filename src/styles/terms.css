@@ -3,175 +3,102 @@
 ========================== */
 
 .terms-container{
-
-    width:min(900px,90%);
-    margin:120px auto 80px;
-
-    color:#333;
-
+    width:min(900px, 90%);
+    margin:132px auto 84px;
+    color:var(--text);
 }
 
-/* ==========================
-   HEADER
-========================== */
-
 .terms-header{
-
     text-align:center;
-
     margin-bottom:4rem;
-
 }
 
 .terms-header h1{
-
-    font-size:clamp(2.2rem,5vw,3.5rem);
-
+    font-size:clamp(2.4rem, 5vw, 4rem);
     margin-bottom:1rem;
-
-    font-weight:500;
-
-    color:#111;
-
 }
 
 .terms-header p{
-
-    max-width:700px;
-
+    max-width:720px;
     margin:auto;
-
     line-height:1.9;
-
-    color:#666;
-
+    color:var(--muted);
 }
 
-/* ==========================
-   CONTENT
-========================== */
-
 .terms-section{
-
-    margin-bottom:3rem;
-
+    margin-bottom:2.6rem;
+    background: rgba(255,255,255,.78);
+    border:1px solid var(--border);
+    border-radius: 24px;
+    padding: 24px 24px 18px;
+    box-shadow: var(--shadow);
 }
 
 .terms-section h2{
-
-    font-size:1.15rem;
-
+    font-size:1rem;
     text-transform:uppercase;
-
-    letter-spacing:1px;
-
-    margin-bottom:1.25rem;
-
-    padding-left:15px;
-
-    border-left:4px solid #111;
-
-    color:#444;
-
+    letter-spacing:.12em;
+    margin-bottom:1rem;
+    color:var(--accent-dark);
 }
 
 .terms-section p{
-
     line-height:1.9;
-
-    color:#555;
-
+    color:var(--muted);
 }
 
 .terms-section ul{
-
-    padding-left:1.5rem;
-
+    padding-left:1.3rem;
 }
 
 .terms-section li{
-
-    margin-bottom:1rem;
-
+    margin-bottom:0.9rem;
     line-height:1.8;
-
-    color:#555;
-
+    color:var(--muted);
 }
 
-/* ==========================
-   NOTE
-========================== */
-
 .terms-note{
-
-    margin-top:4rem;
-
+    margin-top:3.5rem;
     padding:1.5rem;
-
-    background:#f7f7f7;
-
-    border-left:5px solid #111;
-
+    background: rgba(255,255,255,.72);
+    border-left:4px solid var(--accent);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
 }
 
 .terms-note strong{
-
     display:block;
-
     margin-bottom:.75rem;
-
-    color:#111;
-
+    color:var(--text);
 }
 
 .terms-note p{
-
     line-height:1.8;
-
-    color:#555;
-
+    color:var(--muted);
 }
 
-/* ==========================
-   RESPONSIVE
-========================== */
-
 @media (max-width:768px){
-
     .terms-container{
-
-        margin:90px auto 60px;
-
+        margin:112px auto 68px;
+        width:94%;
     }
 
-    .terms-header{
-
-        margin-bottom:3rem;
-
+    .terms-section{
+        padding: 22px 18px 16px;
     }
-
 }
 
 @media (max-width:480px){
-
     .terms-header h1{
-
         font-size:2rem;
-
     }
 
     .terms-section h2{
-
-        font-size:1rem;
-
+        font-size:.95rem;
     }
 
     .terms-section p,
     .terms-section li{
-
         font-size:.95rem;
-
     }
-
 }

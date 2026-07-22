@@ -2,7 +2,7 @@
     width:92%;
     max-width:1400px;
     margin:auto;
-    padding:130px 0 80px;
+    padding:132px 0 84px;
 }
 
 .cart-header{
@@ -32,17 +32,18 @@
     grid-template-columns:120px 1fr auto;
     gap:20px;
     align-items:center;
-    background:#fff;
-    border-radius: 0;
+    background:rgba(255, 255, 255, .9);
+    border-radius: 28px;
     padding:18px;
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
 }
 
 .cart-item img{
     width:120px;
     height:120px;
     object-fit:cover;
-    border-radius:18px;
+    border-radius:20px;
 }
 
 .cart-item-details h3{
@@ -75,35 +76,36 @@
 .quantity-row button{
     width:36px;
     height:36px;
-    background:#f2f2f2;
+    background:#f3ede3;
     font-size:1.1rem;
     font-weight:800;
 }
 
 .quantity-row button:hover{
-    background:#111;
+    background:var(--text);
     color:#fff;
 }
 
 .remove-item-button{
-    background:#f5e2e2;
-    color:#8c1f1f;
+    background:rgba(139, 107, 69, .12);
+    color:var(--accent-dark);
     font-weight:700;
     padding:12px 18px;
 }
 
 .remove-item-button:hover{
-    background:#8c1f1f;
+    background:var(--accent);
     color:#fff;
 }
 
 .cart-summary{
-    background:#111;
+    background:linear-gradient(180deg, #181411, #201913);
     color:#fff;
     border-radius:28px;
     padding:28px;
     position:sticky;
     top:120px;
+    box-shadow:var(--shadow-strong);
 }
 
 .cart-summary h2{
@@ -138,30 +140,33 @@
 }
 
 .clear-cart-button{
-    background:#2b2b2b;
+    background:rgba(255,255,255,.08);
     color:#fff;
     margin-bottom:12px;
+    border:1px solid rgba(255,255,255,.12);
 }
 
 .clear-cart-button:hover{
-    background:#444;
+    background:rgba(255,255,255,.16);
 }
 
 .checkout-link{
     background:#fff;
     color:#111;
+    border:1px solid rgba(255,255,255,.14);
 }
 
 .checkout-link:hover{
-    background:#ddd;
+    background:#f0e7db;
 }
 
 .cart-empty-state{
     text-align:center;
     padding:80px 0;
-    background:#fff;
+    background:rgba(255,255,255,.88);
     border-radius:28px;
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
 }
 
 .cart-empty-state h2{

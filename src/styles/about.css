@@ -2,196 +2,149 @@
    ABOUT SECTION
 =========================== */
 
-.about-section{
-
-    width:100%;
-    padding:100px 0;
-
-    background:#fff;
-
+.about-section {
+    width: 100%;
+    padding: 110px 0;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, .72), rgba(255, 255, 255, .92));
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
-.about-container{
-
-    width:92%;
-    max-width:1400px;
-
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-
-    align-items:center;
-
-    gap:80px;
-
+.about-container {
+    width: 92%;
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 72px;
 }
 
 /* ===========================
    TEXT
 =========================== */
 
-.about-subtitle{
-
-    display:inline-block;
-
-    color:#888;
-
-    font-size:.9rem;
-
-    letter-spacing:2px;
-
-    margin-bottom:15px;
-
+.about-subtitle {
+    display: inline-block;
+    color: var(--accent);
+    font-size: .82rem;
+    letter-spacing: .22em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-.about-title{
-
-    font-size:clamp(2.8rem,6vw,5rem);
-
-    line-height:1.05;
-
-    margin-bottom:30px;
-
-    color:#111;
-
+.about-title {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 1.02;
+    margin-bottom: 26px;
+    color: var(--text);
 }
 
-.about-description{
-
-    font-size:1.1rem;
-
-    line-height:1.9;
-
-    color:#666;
-
-    margin-bottom:20px;
-
+.about-description {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--muted);
+    margin-bottom: 20px;
+    max-width: 560px;
 }
 
-.about-btn{
-
-    display:inline-block;
-
-    margin-top:20px;
-
-    padding:16px 36px;
-
-    background: #fff;
-
-    color: #000;
-
-    text-decoration:none;
-
-    border-radius: 0;
-
-    border: 1px solid #111;
-
-    transition:.3s;
-
-}
-
-.about-btn:hover{
-
-    background:#000;
+.about-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    margin-top: 20px;
+    padding: 0 28px;
+    background: var(--text);
     color: #fff;
+    text-decoration: none;
+    border-radius: 999px;
+    border: 1px solid var(--text);
+    transition: transform .25s ease, background-color .25s ease, color .25s ease;
+    box-shadow: var(--shadow);
+}
 
+.about-btn:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    transform: translateY(-1px);
 }
 
 /* ===========================
    IMAGE
 =========================== */
 
-.about-image{
-
-    overflow:hidden;
-
-    border-radius:20px;
-
+.about-image {
+    overflow: hidden;
+    border-radius: 28px;
+    box-shadow: var(--shadow-strong);
 }
 
-.about-image img{
-
-    width:100%;
-
-    height:clamp(360px, 62vw, 650px);
-
-    object-fit:cover;
-
-    display:block;
-
-    transition:.5s;
-
+.about-image img {
+    width: 100%;
+    height: clamp(360px, 62vw, 650px);
+    object-fit: cover;
+    display: block;
+    transition: transform .5s ease;
 }
 
-.about-image:hover img{
-
-    transform:scale(1.08);
-
+.about-image:hover img {
+    transform: scale(1.05);
 }
 
 /* ===========================
    MOBILE
 =========================== */
 
-@media(max-width:900px){
-
-    .about-container{
-
-        grid-template-columns:1fr;
-
-        gap:50px;
-
+@media (max-width: 900px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 48px;
     }
 
-    .about-title{
-
-        font-size:clamp(2.2rem, 8vw, 3rem);
-
+    .about-title {
+        font-size: clamp(2.2rem, 8vw, 3.2rem);
     }
 
-    .about-description{
-        font-size:1rem;
+    .about-description {
+        font-size: 1rem;
     }
 
-    .about-image img{
-
-        height:420px;
-
+    .about-image img {
+        height: 420px;
     }
-
 }
 
-@media(max-width:640px){
-
-    .about-section{
-        padding:76px 0;
+@media (max-width: 640px) {
+    .about-section {
+        padding: 84px 0;
     }
 
-    .about-container{
-        width:94%;
-        gap:30px;
+    .about-container {
+        width: 94%;
+        gap: 30px;
     }
 
-    .about-text{
-        text-align:center;
+    .about-text {
+        text-align: center;
     }
 
-    .about-subtitle{
-        font-size:.78rem;
+    .about-subtitle {
+        font-size: .75rem;
     }
 
-    .about-description{
-        line-height:1.75;
+    .about-description {
+        line-height: 1.75;
     }
 
-    .about-btn{
-        width:100%;
-        text-align:center;
+    .about-btn {
+        width: 100%;
     }
 
-    .about-image img{
-        height:320px;
+    .about-image img {
+        height: 320px;
     }
-
 }
