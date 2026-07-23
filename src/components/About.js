@@ -10,7 +10,7 @@ export default function About() {
                 <div class="about-text">
 
                     <span class="about-subtitle">
-                        ABOUT PRISCILLA FASHION
+                        ABOUT PRISCA FASHION
                     </span>
 
                     <h2 class="about-title">
@@ -20,7 +20,7 @@ export default function About() {
                     </h2>
 
                     <p class="about-description">
-                        Welcome to Priscilla Beauty Fashion, where culture meets elegance.
+                        Welcome to Prisca Classic Fashion, where culture meets elegance.
                         We specialize in beautifully crafted African fashion that
                         blends tradition with modern style for every occasion.
                     </p>

@@ -1,5 +1,5 @@
 import "../styles/navbar.css";
-import logoImg from "../assets/FB.png";
+import logoImg from "../assets/originallogo.png";
 import { getCartCount } from "../utils/cart";
  
 const personIcon = `
@@ -24,7 +24,7 @@ export default function Navbar() {
                     <div class="logo">
                         <a href="/" class="logo-link">
                             <img src="${logoImg}" alt="Jonadab Fashion">
-                            <span>Priscilla Beauty</span>
+                            <span>Prisca Fashion</span>
                         </a>
                     </div>
 

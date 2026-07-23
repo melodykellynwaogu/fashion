@@ -8,7 +8,7 @@ export default function Footer() {
             <div class="footer-container">
 
                 <h2 class="footer-logo">
-                    PRISCILLA BEAUTY
+                    PRISCA FASHION
                 </h2>
 
                 <ul class="footer-links">
@@ -19,7 +19,7 @@ export default function Footer() {
                 </ul>
 
                 <p class="copyright">
-                    © ${new Date().getFullYear()} Priscilla Beauty.
+                    © ${new Date().getFullYear()} Prisca Fashion.
                     All rights reserved.
                 </p>
 

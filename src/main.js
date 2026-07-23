@@ -23,7 +23,7 @@ import {
     updateQuantity
 } from "./utils/cart";
 
-const contactRecipient = "priscillafashion@email.com";
+const contactRecipient = "priscafashion@email.com";
 
 const routes = {
     "/": Home,

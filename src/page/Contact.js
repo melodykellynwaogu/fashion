@@ -76,7 +76,7 @@ export default function Contact() {
 
                     <div class="info-box">
                         <h3>Email</h3>
-                        <p>priscillafashion@email.com</p>
+                        <p>priscafashion@email.com</p>
                     </div>
 
                     <div class="info-box">
