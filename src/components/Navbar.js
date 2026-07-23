@@ -57,7 +57,7 @@ export default function Navbar() {
                         </li>
 
                         <li>
-                            <a href="#arrival">New Arrival</a>
+                            <a href="/arrival">New Arrival</a>
                         </li>
                     </ul>
 

@@ -51,9 +51,9 @@ export default function Hero() {
                         </span>
 
                         <h1>
-                            Traditional Fashion
+                            Prisca Classic 
                             <br>
-                            Reimagined
+                            Nigerian Wears
                         </h1>
 
                         <p>

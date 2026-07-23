@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import Refund from "./data/Refund";
 import Terms from "./data/Terms";
 import Navbar from "./components/Navbar";
+import Arrival from "./components/Arrival";
 
 
 import {
@@ -35,6 +36,7 @@ const routes = {
     "/policy": Policy,
     "/refund": Refund,
     "/terms": Terms,
+    "/arrival": Arrival,
 
 };
 

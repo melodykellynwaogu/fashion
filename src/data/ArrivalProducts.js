@@ -1,11 +1,11 @@
-import clothsImage11 from "../assets/cloth11.png";
-import clothsImage12 from "../assets/cloth12.png";
-import clothsImage13 from "../assets/cloth13.png";
-import clothsImage14 from "../assets/cloth14.png";
-import clothsImage15 from "../assets/cloth15.png";
+import clothsImage11 from "../assets/image11.png";
+import clothsImage12 from "../assets/image12.png";
+import clothsImage13 from "../assets/image13.png";
+import clothsImage14 from "../assets/image14.png";
+import clothsImage15 from "../assets/image15.png";
 
 
-const products = [
+const ArrivalProducts = [
     {
         id: 11,
         image: clothsImage11,
@@ -61,3 +61,5 @@ const products = [
         description: "",
     }
 ]
+
+export default ArrivalProducts;
