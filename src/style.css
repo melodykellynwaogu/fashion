@@ -50,6 +50,10 @@ body.nav-lock {
   overflow: hidden;
 }
 
+body.modal-lock {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,

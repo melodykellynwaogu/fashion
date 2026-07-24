@@ -1,0 +1,203 @@
+.login-page{
+    width:92%;
+    max-width:1400px;
+    margin:132px auto 84px;
+}
+
+.login-page-card{
+    display:grid;
+    grid-template-columns:.95fr 1.05fr;
+    border-radius:34px;
+    overflow:hidden;
+    box-shadow:var(--shadow-strong);
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.9);
+}
+
+.login-page-aside{
+    display:grid;
+    gap:18px;
+    align-content:start;
+    padding:42px;
+    color:#fff;
+    background:
+        radial-gradient(circle at top left, rgba(255,255,255,.14), transparent 38%),
+        linear-gradient(180deg, #1a1511 0%, #251d17 100%);
+}
+
+.login-page-content{
+    display:grid;
+    gap:18px;
+    align-content:start;
+    padding:42px;
+    background:rgba(255,255,255,.94);
+}
+
+.login-page-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:max-content;
+    min-height:34px;
+    padding:0 14px;
+    border-radius:999px;
+    background:rgba(139,107,69,.12);
+    color:var(--accent-dark);
+    font-size:.78rem;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+}
+
+.login-kicker{
+    color:rgba(255,255,255,.78);
+    font-size:.8rem;
+    font-weight:700;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+}
+
+.login-page-aside h1{
+    color:#fff;
+    font-size:clamp(2rem,4vw,3.3rem);
+    line-height:1.02;
+}
+
+.login-copy{
+    max-width:360px;
+    color:rgba(255,255,255,.82);
+    line-height:1.8;
+}
+
+.login-benefits{
+    display:grid;
+    gap:10px;
+    margin-top:8px;
+    padding:0;
+    list-style:none;
+}
+
+.login-benefits li{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:rgba(255,255,255,.92);
+}
+
+.login-benefits li::before{
+    content:"";
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 0 4px rgba(139,107,69,.18);
+    flex-shrink:0;
+}
+
+.login-home-link{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:46px;
+    width:max-content;
+    margin-top:10px;
+    padding:0 18px;
+    border-radius:999px;
+    text-decoration:none;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.08);
+    transition:transform .25s ease, background-color .25s ease, border-color .25s ease;
+}
+
+.login-home-link:hover{
+    background:rgba(255,255,255,.16);
+    transform:translateY(-1px);
+}
+
+.login-form{
+    display:grid;
+    gap:14px;
+}
+
+.login-field{
+    display:grid;
+    gap:8px;
+    color:var(--text);
+    font-weight:600;
+}
+
+.login-field input{
+    width:100%;
+    min-height:50px;
+    padding:0 14px;
+    border:1px solid rgba(23,20,18,.14);
+    border-radius:16px;
+    background:rgba(255,255,255,.78);
+    color:var(--text);
+    outline:none;
+    transition:border-color .25s ease, box-shadow .25s ease, background-color .25s ease;
+}
+
+.login-field input:focus{
+    border-color:rgba(139,107,69,.6);
+    background:#fff;
+    box-shadow:0 0 0 4px rgba(139,107,69,.12);
+}
+
+.login-submit{
+    min-height:50px;
+    border:0;
+    border-radius:999px;
+    background:var(--text);
+    color:#fff;
+    font-weight:700;
+    cursor:pointer;
+    transition:transform .25s ease, background-color .25s ease;
+}
+
+.login-submit:hover{
+    background:var(--accent);
+    transform:translateY(-1px);
+}
+
+.login-legal{
+    color:var(--muted);
+    font-size:.92rem;
+    line-height:1.7;
+}
+
+.login-message{
+    min-height:22px;
+    color:var(--accent-dark);
+    font-size:.95rem;
+    font-weight:600;
+}
+
+@media (max-width: 860px){
+    .login-page-card{
+        grid-template-columns:1fr;
+    }
+
+    .login-page-aside,
+    .login-page-content{
+        padding:32px;
+    }
+}
+
+@media (max-width: 640px){
+    .login-page{
+        width:94%;
+        margin-top:112px;
+        margin-bottom:68px;
+    }
+
+    .login-page-card{
+        border-radius:28px;
+    }
+
+    .login-page-aside,
+    .login-page-content{
+        padding:24px 20px;
+    }
+}

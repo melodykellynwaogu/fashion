@@ -75,7 +75,11 @@ export default function Navbar() {
                     </div>
 
                     <div class="action-red">
-                        <a href="/login" class="icon-link login-link" aria-label="Login">
+                        <a
+                            href="/login"
+                            class="icon-link login-link"
+                            aria-label="Login"
+                        >
                             ${personIcon}
                         </a>
 

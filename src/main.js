@@ -6,6 +6,7 @@ import Collection from "./page/Collection";
 import Product from "./page/Product";
 import Cart from "./page/Cart";
 import SearchResults from "./page/SearchResults";
+import Login from "./page/Login";
 import products from "./data/products";
 import About from "./components/About";
 import Policy from "./data/Policy";
@@ -14,7 +15,6 @@ import Refund from "./data/Refund";
 import Terms from "./data/Terms";
 import Navbar from "./components/Navbar";
 import Arrival from "./components/Arrival";
-
 
 import {
     addToCart,
@@ -33,6 +33,7 @@ const routes = {
     "/product": Product,
     "/cart": Cart,
     "/search": SearchResults,
+    "/login": Login,
     "/policy": Policy,
     "/refund": Refund,
     "/terms": Terms,
@@ -49,7 +50,7 @@ function render() {
         ${Navbar()}
         ${Page()}
         ${Footer()}
-    `
+    `;
 }
 
 document.addEventListener("click", e => {
@@ -109,6 +110,12 @@ document.addEventListener("click", e => {
             return;
         }
 
+        if (action === "shuffle-arrivals") {
+            window.__arrivalShuffle = !window.__arrivalShuffle;
+            window.dispatchEvent(new PopStateEvent("popstate"));
+            return;
+        }
+
         window.dispatchEvent(new PopStateEvent("popstate"));
 
         return;
@@ -158,6 +165,22 @@ document.addEventListener("click", e => {
 });
 
 document.addEventListener("submit", e => {
+    const loginForm = e.target.closest("[data-login-form]");
+
+    if (loginForm) {
+        e.preventDefault();
+        const message = loginForm.querySelector("[data-login-message]");
+        const email = loginForm.querySelector("input[type='email']")?.value.trim() || "";
+        const password = loginForm.querySelector("input[type='password']")?.value || "";
+
+        if (email && password) {
+            message.textContent = "Login successful. Welcome back!";
+        } else {
+            message.textContent = "Please enter your email and password.";
+        }
+        return;
+    }
+
     const searchForm = e.target.closest("[data-search-form]");
 
     if (searchForm) {

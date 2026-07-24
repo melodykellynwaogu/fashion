@@ -1,0 +1,245 @@
+/* ==========================================================================
+   Modal Backdrop / Container
+   ========================================================================== */
+/* .login-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(17, 13, 10, 0.58);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+} */
+
+
+
+.login-modal-backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ==========================================================================
+   Modal Main Box
+   ========================================================================== */
+.login-modal {
+    position: absolute;
+    width: min(100%, 920px);
+    max-height: calc(100dvh - 48px);
+    margin: 0; /* Ensures Flexbox handles perfect centering */
+    overflow: auto;
+    background: var(--surface-strong);
+    border: 1px solid rgba(23, 20, 18, 0.08);
+    border-radius: 34px;
+    box-shadow: var(--shadow-strong);
+}
+
+.login-modal-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+}
+
+/* ==========================================================================
+   Modal Sections (Aside & Content)
+   ========================================================================== */
+.login-modal-aside {
+    display: grid;
+    gap: 18px;
+    align-content: start;
+    padding: 42px;
+    color: #fff;
+    background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 38%),
+        linear-gradient(180deg, #1a1511 0%, #251d17 100%);
+}
+
+.login-modal-content {
+    display: grid;
+    gap: 18px;
+    align-content: start;
+    padding: 42px;
+}
+
+/* ==========================================================================
+   Close Button
+   ========================================================================== */
+.login-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.login-modal-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* ==========================================================================
+   Typography & Aside Elements
+   ========================================================================== */
+.login-kicker {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.login-modal-aside h2 {
+    color: #fff;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.02;
+}
+
+.login-copy {
+    max-width: 360px;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.8;
+}
+
+.login-benefits {
+    display: grid;
+    gap: 10px;
+    margin-top: 8px;
+    padding: 0;
+    list-style: none;
+}
+
+.login-benefits li {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.login-benefits li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(139, 107, 69, 0.18);
+}
+
+/* ==========================================================================
+   Form Components
+   ========================================================================== */
+.login-form {
+    display: grid;
+    gap: 14px;
+}
+
+.login-field {
+    display: grid;
+    gap: 8px;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.login-field input {
+    width: 100%;
+    min-height: 50px;
+    padding: 0 14px;
+    border: 1px solid rgba(23, 20, 18, 0.14);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.78);
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.login-field input:focus {
+    border-color: rgba(139, 107, 69, 0.6);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(139, 107, 69, 0.12);
+}
+
+.login-submit {
+    min-height: 50px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--text);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.login-submit:hover {
+    background: var(--accent);
+    transform: translateY(-1px);
+}
+
+.login-legal {
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.login-message {
+    min-height: 22px;
+    color: var(--accent-dark);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media (max-width: 860px) {
+    .login-modal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .login-modal-aside,
+    .login-modal-content {
+        padding: 32px;
+    }
+
+    /* Keeps close button visible over light content on stacked mobile view */
+    .login-modal-close {
+        background: rgba(0, 0, 0, 0.08);
+        color: var(--text);
+    }
+
+    .login-modal-close:hover {
+        background: rgba(0, 0, 0, 0.16);
+    }
+}
+
+@media (max-width: 640px) {
+    .login-modal-backdrop {
+        padding: 14px;
+    }
+
+    .login-modal {
+        border-radius: 28px;
+        max-height: calc(100dvh - 28px);
+    }
+
+    .login-modal-aside,
+    .login-modal-content {
+        padding: 24px 20px;
+    }
+
+    .login-modal-close {
+        top: 12px;
+        right: 12px;
+    }
+}

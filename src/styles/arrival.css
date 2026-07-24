@@ -1,79 +1,131 @@
 .arrival-page{
     width:92%;
     max-width:1400px;
-    margin:120px auto 80px;
+    margin:132px auto 84px;
 }
 
-.arrival-header{
+.arrival-hero{
     text-align:center;
-    margin-bottom:45px;
+    margin-bottom:34px;
+}
+
+.arrival-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:14px;
+    color:var(--accent);
+    font-size:.82rem;
+    font-weight:700;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+}
+
+.arrival-kicker::before,
+.arrival-kicker::after{
+    content:"";
+    width:28px;
+    height:1px;
+    background:currentColor;
+    opacity:.7;
 }
 
 .arrival-title{
-    font-size:3rem;
-    font-family:serif;
-    font-weight:500;
+    font-size:clamp(2.4rem, 5vw, 4rem);
+    line-height:1.02;
+    margin-bottom:14px;
+}
+
+.arrival-intro{
+    max-width:760px;
+    margin:0 auto;
+    color:var(--muted);
+    line-height:1.8;
 }
 
 .arrival-toolbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    border:1px solid #e5e5e5;
-    padding:18px 30px;
-    margin-bottom:45px;
+    gap:16px;
+    padding:16px 20px;
+    margin-bottom:34px;
+    background:rgba(255,255,255,.8);
+    border:1px solid var(--border);
+    border-radius:20px;
+    box-shadow:var(--shadow);
 }
 
 .arrival-count{
-    color:#777;
-    letter-spacing:1px;
+    color:var(--muted);
+    letter-spacing:.04em;
+    font-weight:600;
 }
 
 .shuffle-btn{
-    padding:12px 24px;
-    border:1px solid #000;
-    background:#fff;
+    padding:12px 18px;
+    border:1px solid var(--text);
+    border-radius:999px;
+    background:var(--text);
+    color:#fff;
     cursor:pointer;
-    transition:.3s;
+    transition:transform .25s ease, background-color .25s ease, border-color .25s ease;
+    font-weight:700;
 }
 
 .shuffle-btn:hover{
-    background:#000;
-    color:#fff;
+    background:var(--accent);
+    border-color:var(--accent);
+    transform:translateY(-1px);
 }
 
 .arrival-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:35px;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:28px;
 }
 
 .arrival-card{
     position:relative;
-    background:#fff;
+    background:rgba(255,255,255,.9);
+    border-radius:28px;
     overflow:hidden;
+    border:1px solid var(--border);
+    box-shadow:var(--shadow);
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.arrival-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-strong);
 }
 
 .arrival-badge{
     position:absolute;
-    top:15px;
-    left:15px;
-    background:#000;
+    top:16px;
+    left:16px;
+    background:rgba(17,17,17,.92);
     color:#fff;
-    padding:6px 12px;
-    font-size:.75rem;
-    text-transform:uppercase;
+    padding:7px 12px;
+    font-size:.74rem;
+    font-weight:700;
+    border-radius:999px;
     z-index:5;
+    letter-spacing:.04em;
 }
 
 .arrival-image{
     overflow:hidden;
+    background:#f4ede4;
+    aspect-ratio: 4 / 5;
 }
 
 .arrival-image img{
     width:100%;
+    height:100%;
+    object-fit:cover;
     display:block;
-    transition:.4s;
+    transition:transform .55s ease;
 }
 
 .arrival-card:hover img{
@@ -81,48 +133,120 @@
 }
 
 .arrival-details{
-    text-align:center;
-    padding:20px;
+    display:grid;
+    gap:12px;
+    padding:22px;
 }
 
 .arrival-category{
-    color:#888;
-    font-size:.85rem;
-    margin-bottom:10px;
+    color:var(--accent);
+    font-size:.8rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-weight:700;
 }
 
 .arrival-name{
-    font-size:1.2rem;
-    margin-bottom:15px;
+    font-size:1.25rem;
+    line-height:1.15;
+}
+
+.arrival-description{
+    color:var(--muted);
+    line-height:1.7;
+    font-size:.96rem;
 }
 
 .arrival-price{
     display:flex;
-    justify-content:center;
-    gap:10px;
-    margin-bottom:20px;
+    align-items:baseline;
+    gap:12px;
 }
 
 .old-price{
-    color:#999;
+    color:#8d8378;
     text-decoration:line-through;
 }
 
 .new-price{
-    color:#000;
-    font-weight:700;
+    color:var(--text);
+    font-weight:800;
+    font-size:1.2rem;
+}
+
+.arrival-actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:6px;
 }
 
 .arrival-btn{
-    width:100%;
-    padding:12px;
-    border:none;
-    background:#111;
-    color:#fff;
-    cursor:pointer;
-    transition:.3s;
+    min-height:46px;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-weight:700;
+    transition:transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease;
 }
 
-.arrival-btn:hover{
-    background:#444;
+.arrival-btn-primary{
+    background:var(--text);
+    color:#fff;
+    border:1px solid var(--text);
+}
+
+.arrival-btn-primary:hover{
+    background:var(--accent);
+    border-color:var(--accent);
+    transform:translateY(-1px);
+}
+
+.arrival-btn-secondary{
+    background:rgba(255,255,255,.74);
+    color:var(--text);
+    border:1px solid rgba(23,20,18,.14);
+}
+
+.arrival-btn-secondary:hover{
+    background:var(--text);
+    color:#fff;
+    transform:translateY(-1px);
+}
+
+@media (max-width: 860px){
+    .arrival-toolbar{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .shuffle-btn{
+        width:100%;
+    }
+}
+
+@media (max-width: 640px){
+    .arrival-page{
+        width:94%;
+        margin-top:112px;
+        margin-bottom:68px;
+    }
+
+    .arrival-title{
+        font-size:clamp(2rem, 8vw, 2.8rem);
+    }
+
+    .arrival-toolbar{
+        padding:14px 16px;
+    }
+
+    .arrival-details{
+        padding:20px;
+    }
+
+    .arrival-actions{
+        grid-template-columns:1fr;
+    }
 }
